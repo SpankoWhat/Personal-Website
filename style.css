@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin:0;
+    font-family: monospace;
+    scroll-behavior: smooth;
+    --primary: hsl(315, 25%, 6%);
+    --secondary:rgba(143, 47, 18, 0.959);
+    --primary-text: hsl(14, 53%, 65%);
+    ---secondary-text:hsl(6, 39%, 46%);
+}
+
+/* Navigation */
+.navigation-primary {
+    background: var(--primary);
+    display: flex;
+    position: fixed;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0 1rem;
+    z-index: 10;
+    /* visibility: hidden;  */
+}
+
+.navigation-primary > a {
+    display: block;
+    padding: 2em;
+    text-decoration: none; 
+    color: var(--primary-text);
+}
+.navigation-primary > a:hover {
+    background:var(--secondary);    
+}
+
+/* Landing Page */
+.landing-primary {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-image: linear-gradient(130deg, var(--primary), var(--secondary));
+}
+
+.landing-content-head{
+    display: block;
+    font-size: 7em;
+    color: var(--primary-text);
+}
+.landing-content-body{
+    display: block;
+    font-size: 2em;
+    color: var(---secondary-text);
+}
+
+.landing-primary::after {
+content: "";
+}
+
+/* About me page */
+.about-primary {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Designers */
+.back-drop {
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    background: rgba(255, 255, 255, 0.445);
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+}
+
+/* Card Formats */
+.card-main {
+
+}
