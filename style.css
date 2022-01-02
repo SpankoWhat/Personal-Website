@@ -55,6 +55,7 @@
 
 .landing-primary::after {
 content: "";
+block-size: auto;
 }
 
 /* About me page */
