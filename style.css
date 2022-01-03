@@ -1,12 +1,22 @@
+:root{
+    --primary: hsl(315, 25%, 6%);
+    --secondary:rgba(143, 47, 18, 0.959);
+    --primary-text: hsl(14, 53%, 65%);
+    --secondary-text:hsl(6, 39%, 46%);
+    scroll-behavior: smooth;
+}
+
 * {
     padding: 0;
     margin:0;
     font-family: monospace;
-    scroll-behavior: smooth;
-    --primary: hsl(315, 25%, 6%);
-    --secondary:rgba(143, 47, 18, 0.959);
-    --primary-text: hsl(14, 53%, 65%);
-    ---secondary-text:hsl(6, 39%, 46%);
+    /* outline:rgb(240, 113, 113) solid 2px; */
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
 }
 
 /* Navigation */
@@ -27,6 +37,7 @@
     text-decoration: none; 
     color: var(--primary-text);
 }
+
 .navigation-primary > a:hover {
     background:var(--secondary);    
 }
@@ -42,37 +53,128 @@
     background-image: linear-gradient(130deg, var(--primary), var(--secondary));
 }
 
+.landing-content {
+    width: 70%;
+}
+
 .landing-content-head{
     display: block;
     font-size: 7em;
+    max-width: fit-content;
     color: var(--primary-text);
 }
+
 .landing-content-body{
     display: block;
+    max-width: fit-content;
     font-size: 2em;
+    text-align: center;
     color: var(---secondary-text);
 }
 
 .landing-primary::after {
-content: "";
-block-size: auto;
+    content: "";
 }
 
 /* About me page */
-.about-primary {
-    display: flex;
-    flex-direction: column;
+.project-primary {
+    text-align: left;
 }
 
-/* Designers */
-.back-drop {
-    padding: 0.2em 0.5em 0.2em 0.5em;
-    background: rgba(255, 255, 255, 0.445);
-    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
-    border-radius: 2px;
+.project-showcase {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 0.3fr));
+    grid-gap: 1rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 2em 4em 1em 4em;
 }
 
-/* Card Formats */
-.card-main {
+.project-card {
+    --padding-value: 2rem;
+    color: var(--primary-text);
+    background-image: url(sunsetcity.jpg);
+    background-size: cover;
+    padding-top: 20em;
+    max-width: 45ch;
+    border-radius: 1rem;
+    overflow: hidden;
 
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    transition: transform 500ms ease, box-shadow 500ms ease;
+}
+
+.project-card:hover,
+.project-card:focus-within {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+}
+
+.project-card-content {
+    padding-top: 2em;
+    padding-bottom: 4em;
+    background: linear-gradient(hsl(0, 0%, 0%, 0),hsl(0, 0%, 0%, 0.4) 10%, hsl(0, 0%, 0%, 1));
+    transform: translateY(70%);
+    transition: transform 500ms ease;
+}
+
+.project-card-content > *:not(.project-card-t) {
+    opacity: 0;
+    transition: opacity 500ms linear ;
+}
+
+.project-card:hover .project-card-content {
+    transform: translateY(0%);
+}
+
+.project-card:hover .project-card-content > *:not(.project-card-t) {
+    opacity: 1;
+}
+
+.project-card-t {
+    position: relative;
+    max-width: fit-content;
+    padding-left: var(--padding-value);
+}
+
+.project-card-t::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: var(--secondary);
+    transform: scaleX(0);
+    transition: transform 500ms ease;
+}
+
+.project-card:hover .project-card-t::after {
+    transform: scaleX(1);
+    transition-delay: 200ms;
+}
+
+.project-card-p {
+    position: relative;
+    max-width: 40ch;
+    padding-left: var(--padding-value);
+    bottom: -2px;
+}
+
+.project-card-button {
+    position: relative;
+    left: var(--padding-value);
+    top: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--primary-text);
+    background-color: var(--secondary);
+    padding: 0.5em 1.25em;
+    border-radius: 0.25rem;
+}
+
+.project-card-button:hover,
+.project-card-button:focus {
+    background-color: var(--primary);
 }
