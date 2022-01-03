@@ -1,6 +1,6 @@
 :root{
     --primary: hsl(315, 25%, 6%);
-    --secondary:rgba(143, 47, 18, 0.959);
+    --secondary:rgba(143, 47, 18);
     --primary-text: hsl(14, 53%, 65%);
     --secondary-text:hsl(6, 39%, 46%);
     scroll-behavior: smooth;
@@ -59,6 +59,7 @@
 
 .landing-content-head{
     display: block;
+    position: relative;
     font-size: 7em;
     max-width: fit-content;
     color: var(--primary-text);
@@ -72,9 +73,6 @@
     color: var(---secondary-text);
 }
 
-.landing-primary::after {
-    content: "";
-}
 
 /* About me page */
 .project-primary {
