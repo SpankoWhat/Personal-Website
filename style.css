@@ -79,6 +79,11 @@
     text-align: left;
 }
 
+.project-primary h1 {
+    text-align: center;
+    
+}
+
 .project-showcase {
     display: grid;
     justify-content: center;
@@ -92,7 +97,6 @@
 .project-card {
     --padding-value: 2rem;
     color: var(--primary-text);
-    background-image: url(sunsetcity.jpg);
     background-size: cover;
     padding-top: 20em;
     max-width: 45ch;
