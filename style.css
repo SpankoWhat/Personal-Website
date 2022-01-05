@@ -1,15 +1,18 @@
 :root{
-    --primary: hsl(315, 25%, 6%);
-    --secondary:rgba(143, 47, 18);
-    --primary-text: hsl(14, 53%, 65%);
-    --secondary-text:hsl(6, 39%, 46%);
+    --primary: hsl(345, 6%, 13%);
+    --secondary:hsl(347, 7%, 27%);
+    --hover: hsl(347, 7%, 41%);
+    --primary-text: hsl(182, 84%, 37%);
+    --secondary-text:hsl(0, 0%, 100%);
+    --decorators: hsl(339, 69%, 42%);
+
     scroll-behavior: smooth;
 }
 
 * {
     padding: 0;
     margin:0;
-    font-family: Georgia;
+    font-family: monospace;
     text-decoration: none;
     /* outline:rgb(240, 113, 113) solid 2px; */
 }
@@ -22,24 +25,24 @@
 
 /* Navigation */
 .navigation-primary {
-    background: var(--primary);
+    background: var(--secondary);
     display: flex;
     position: fixed;
     justify-content: flex-end;
     width: 100%;
-    padding: 0 1rem;
     z-index: 10;
-    /* visibility: hidden;  */
 }
 
 .navigation-primary > a {
     display: block;
+    text-align: center;
     padding: 2em;
+    min-width: 10em;
     color: var(--primary-text);
 }
 
 .navigation-primary > a:hover {
-    background:var(--secondary);    
+    background:var(--hover);    
 }
 
 /* Landing Page */
@@ -50,20 +53,20 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    /* background-image: linear-gradient(130deg, var(--primary), var(--secondary)); */
-    background-color: black;
+    background-image: linear-gradient(70deg, hsl(342, 74%, 50%), hsl(234, 37%, 20%))
 }
 
 .landing-content {
     width: 70%;
-    /* animation: reposition 4s linear forwards; */
+    margin-left: -20em;
+    transition: margin-left 500ms ease-in, margin-top 500ms 1s ease;
 }
 
-/* @keyframes reposition {
-    20% {margin-right: 15rem;}
-    70% {margin-right: 30rem;}
-    100% {margin-top: -30rem; margin-right: 30rem;}
-} */
+.landing-primary:hover .landing-content,
+.landing-primary:focus-within .landing-content {
+    margin-left: -40em;
+    margin-top: -40em;
+}
 
 .landing-content-head {
     display: block;
@@ -77,22 +80,22 @@
     display: block;
     max-width: fit-content;
     font-size: 2em;
-    text-align: center;
-    color: white;
+    color: var(--secondary-text);
 }
 
 /* About me page */
 .project-primary {
-    margin-bottom: 10em;
-    align-content: center;
-    /* background-image: linear-gradient(130deg, var(--primary), var(--secondary)); */
+    padding-bottom: 10em;
+    background-image: linear-gradient(130deg, var(--primary), var(--secondary));
+    width: 100%;
 }
 
-.project-primary h1 {
-    margin-top: 0.5em;
-    text-align: center; 
-    font-size: 6rem; 
-    color: var(--secondary-text); 
+.project-primary-header {
+    font-size: 7em; 
+    width: 70%;
+    margin-left: 1.5em;
+    max-width: fit-content;
+    color: var(--primary-text); 
 }
 
 @media (max-width: 28.75em) {
@@ -166,7 +169,7 @@
     left: 0;
     height: 3px;
     width: 100%;
-    background: var(--secondary);
+    background: var(--decorators);
     transform: scaleX(0);
     transition: transform 500ms ease;
 }
