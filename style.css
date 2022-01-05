@@ -77,6 +77,7 @@
 /* About me page */
 .project-primary {
     text-align: left;
+    margin-bottom: 2em;
 }
 
 .project-primary h1 {
@@ -114,9 +115,9 @@
 }
 
 .project-card-content {
-    padding-top: 2em;
+    padding-top: 3em;
     padding-bottom: 4em;
-    background: linear-gradient(hsl(0, 0%, 0%, 0),hsl(0, 0%, 0%, 0.4) 10%, hsl(0, 0%, 0%, 1));
+    background: linear-gradient(hsl(0, 0%, 0%, 0), hsl(0, 0%, 0%, 1));
     transform: translateY(70%);
     transition: transform 500ms ease;
 }
@@ -162,6 +163,7 @@
     max-width: 40ch;
     padding-left: var(--padding-value);
     bottom: -2px;
+    min-height: 7rem;
 }
 
 .project-card-button {
