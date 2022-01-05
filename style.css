@@ -23,7 +23,7 @@
     box-sizing: border-box;
 }
 
-/* Navigation */
+/* -----------Navigation----------- */
 .navigation-primary {
     background: var(--secondary);
     display: flex;
@@ -45,7 +45,17 @@
     background:var(--hover);    
 }
 
-/* Landing Page */
+.landing-content-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.landing-content-info span{
+    padding: 1em 0 1em 0;
+}
+
+/* -----------Landing Page----------- */
 .landing-primary {
     display: flex;
     flex-direction: column;
@@ -59,7 +69,7 @@
 .landing-content {
     width: 70%;
     margin-left: -20em;
-    transition: margin-left 500ms ease-in, margin-top 500ms 1s ease;
+    transition: margin-left 500ms cubic-bezier(0, 0, 0, 0.97), margin-top 500ms 1s cubic-bezier(0, 0, 0, 0.99);
 }
 
 .landing-primary:hover .landing-content,
@@ -83,7 +93,7 @@
     color: var(--secondary-text);
 }
 
-/* About me page */
+/* -----------Project me page----------- */
 .project-primary {
     padding-bottom: 10em;
     background-image: linear-gradient(130deg, var(--primary), var(--secondary));
@@ -123,20 +133,20 @@
     border-radius: 1rem;
     overflow: hidden;
 
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 2px black;
     transition: transform 500ms ease, box-shadow 500ms ease;
 }
 
 .project-card:hover,
 .project-card:focus-within {
     transform: scale(1.05);
-    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px black;
 }
 
 .project-card-content {
     padding-top: 3em;
     padding-bottom: 4em;
-    background: linear-gradient(hsl(0, 0%, 0%, 0), hsl(0, 0%, 0%, 1));
+    background: linear-gradient(hsl(0,0%,0%,0.5), rgba(200, 9, 248, 0.5));
     transform: translateY(70%);
     transition: transform 500ms ease;
 }
@@ -237,9 +247,34 @@
   
   .contact-section-header > p {
     font-style: italic;
-    color: var(--primary-text);
+    font-size: 3em;
+    /* color: var(--primary-text); */
+    animation: rainbow 10s linear forwards;
   }
   
+  @keyframes rainbow {
+      0% {color: rgb(255, 0, 0);}
+      5% {color: rgb(255, 136, 0);}
+      15% {color: rgb(229, 255, 0);}
+      20% {color: rgb(166, 255, 0);}
+      25% {color: rgb(0, 255, 106);}
+      30% {color: rgb(0, 217, 255);}
+      35% {color: rgb(0, 110, 255);}
+      40% {color: rgb(17, 0, 255);}
+      45% {color: rgb(132, 0, 255);}
+      50% {color: rgb(255, 0, 98);}
+      55% {color: rgb(255, 0, 43);}
+      60% {color: rgb(255, 0, 200);}
+      65% {color: rgb(153, 0, 255);}
+      70% {color: rgb(98, 0, 255);}
+      75% {color: rgb(0, 119, 255);}
+      80% {color: rgb(0, 255, 234);}
+      85% {color: rgb(0, 255, 0);}
+      90% {color: rgb(136, 255, 0);}
+      95% {color: rgb(255, 238, 0);}
+      100% {color: rgb(255, 0, 0);}
+  }
+
   .contact-links {
     display: flex;
     justify-content: center;
