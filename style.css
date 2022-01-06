@@ -249,7 +249,7 @@
     font-style: italic;
     font-size: 3em;
     /* color: var(--primary-text); */
-    animation: rainbow 10s linear forwards;
+    animation: rainbow 10s linear infinite;
   }
   
   @keyframes rainbow {
