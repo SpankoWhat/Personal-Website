@@ -31,6 +31,7 @@
     justify-content: flex-end;
     width: 100%;
     z-index: 10;
+    box-shadow: 2px 2px 2px black;
 }
 
 .navigation-primary > a {
@@ -93,6 +94,7 @@
 
 .landing-content-info span{
     padding: 1em 0 1em 0;
+    color: var(--primary-text);
     font-size: 1.6rem;
     font-weight: 600;
     opacity: 0;
@@ -249,22 +251,26 @@
     background: var(--primary);
 }
   
-.contact-section-header > h2 {
-font-size: 6rem;
-color: var(--secondary-text);
+.contact-section-header  h2 {
+    font-size: 6rem;
+    color: var(--secondary-text);
 }
 
 @media (max-width: 28.75em) {
-.contact-section-header > h2 {
-    font-size: 4rem;
-}
+    .contact-section-header  h2 {
+        font-size: 4rem;
+    }
 }
 
-.contact-section-header > p {
-font-style: italic;
-font-size: 3em;
-/* color: var(--primary-text); */
-animation: rainbow 10s linear infinite;
+.contact-section-header span,
+.contact-section-header p {
+    font-style: italic;
+    font-size: 3em;
+    color: var(--primary-text);
+}
+
+.contact-section-header span {
+    animation: rainbow 10s linear infinite;
 }
 
 @keyframes rainbow {
