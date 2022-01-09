@@ -34,7 +34,7 @@
     box-shadow: 2px 2px 2px black;
 }
 
-.navigation-primary > a {
+.navigation-primary a {
     display: block;
     text-align: center;
     padding: 2em;
@@ -42,9 +42,27 @@
     color: var(--primary-text);
 }
 
-.navigation-primary > a:hover {
+.navigation-primary a:hover {
     background:var(--hover);    
 }
+
+.navigation-primary a::after {
+    /* Make a marker under */
+}
+
+/* .side-home {
+    position: fixed;
+    padding-top: 50%;
+    padding-left: var(--distance);
+    writing-mode: vertical-rl;
+    color: var(--primary-text);
+    z-index: 10;
+    animation: up-down 4s linear 2s infinite, rainbow 10s linear infinite;
+}
+
+@keyframes up-down {
+    50% {padding-top: 45%}
+} */
 
 /* -----------Landing Page----------- */
 .landing-primary {
@@ -92,7 +110,7 @@
     margin-top: 20vh;
 }
 
-.landing-content-info span{
+.landing-content-info span {
     padding: 1em 0 1em 0;
     color: var(--primary-text);
     font-size: 1.6rem;
@@ -186,13 +204,14 @@
 .project-card-t {
     position: relative;
     max-width: fit-content;
+    bottom: 0.4em;
     padding-left: var(--padding-value);
 }
 
 .project-card-t::after {
     content: "";
     position: absolute;
-    bottom: -1px;
+    bottom: -5px;
     left: 0;
     height: 3px;
     width: 100%;
