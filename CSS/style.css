@@ -1,0 +1,172 @@
+:root {
+    --primary: hsla(0, 96%, 41%, 0.781);
+    --secondary: hsla(0, 100%, 85%, 0.452);
+    --hover: hsl(347, 7%, 41%);
+    --primary-text: hsl(111, 100%, 50%);
+    --secondary-text: hsl(91, 100%, 79%);
+    --decorators: hsl(0, 100%, 16%);
+    --side-bar: 150px;
+    scroll-behavior: smooth;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+h1 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: center;
+    color: var(--primary-text);
+}
+
+h2 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: left;
+    padding-left: 1vh;
+    padding-bottom: 1vh;
+    margin: 0;
+    color: var(--primary-text);
+}
+
+p {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: var(--secondary-text);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: 150px;
+}
+
+body {
+    background-color: #C0C0C0;
+    background-image: url(../Media/Design/space.png);
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.sidebar {
+    max-width: var(--side-bar);
+    height: 100vh;
+    top: 0;
+    left: 0;
+    align-content: center;
+    z-index: 1000;
+    position: sticky;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: 0vh 5vh;
+    flex-grow: 1;
+}
+
+nav {
+    background-image: url(../Media/Design/sidebar.gif);
+    background-size: 100% 100%;
+    min-width: 85px;
+    padding: 100% 0%;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 10px 10px 0;
+}
+
+nav a {
+    color: #FFFF00;
+    text-decoration: none;
+    padding: 5% 15%;
+}
+
+.section {
+    border: 1px solid #000080;
+    background-image: url(../Media/Design/space2.png);
+}
+
+.divcon {
+    height: 60px;
+    padding: 0 20px 0 20px;
+    background-position: center;
+    background-image: url(../Media/Design/looking_divider.gif);
+}
+
+#projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    max-height: 450px;
+    background-color: var(--primary);
+    border: 3px solid var(--decorators);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 5px 5px 0px var(--secondary);
+}
+
+.project-card h3 {
+    color: var(--primary-text);
+    max-height: 5%;
+    font-size: 1.2em;
+    margin-top: 0px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border: 2px solid #000000;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 0.9em;
+    flex-grow: 1;
+    overflow-y: auto;
+    color: var(--secondary-text);
+    margin-bottom: 15px;
+}
+
+.project-card a {
+    display: inline-block;
+    width: 50%;
+    background-color: #00ff00;
+    color: #000080;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 2px solid #000080;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    background-color: #ff00ff;
+    color: #ffff00;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    justify-content: center;
+    display: flex;
+}
+
+#contact a {
+    background-color: #00ff00;
+    color: #000080;
+    padding: 5px 10px;
+    margin: 5px 10px 20px 10px;
+    text-decoration: none;
+    border: 2px solid #000080;
+    font-weight: bold;
+}

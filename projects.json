@@ -1,0 +1,26 @@
+[
+    {
+        "title": "THIS WEBSITE",
+        "description": "My personal project for Decemeber 2021 was creating this website in order to showcase my work. Used AWS buckets, Route 63, pure HTML and CSS.",
+        "image": "Media/API-in-C.png",
+        "link": "https://github.com/SpankoWhat/Personal-Website"
+    },
+    {
+        "title": "C and API",
+        "description": "My first introduction to C and API. Really loved C and would like to explore more. Learn more about my final project.",
+        "image": "Media/API-in-C.png",
+        "link": "https://github.com/SpankoWhat/CNIT315/tree/main/Final%20Project"
+    },
+    {
+        "title": "Game Development",
+        "description": "A personal project that I worked along with a friend to apply some of the networking concepts in order to make a mulitplayer game",
+        "image": "Media/OSRSS.png",
+        "link": "https://github.com/SpankoWhat/OSRSSIM_project"
+    },
+    {
+        "title": "Sector on a Floppy",
+        "description": "A fun little hex code experiment I play with.",
+        "image": "Media/SectorImg.jpg",
+        "link": "https://sectordisk.pw/?sectors&s=1030"
+    }
+]

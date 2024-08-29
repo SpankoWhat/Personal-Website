@@ -1,0 +1,44 @@
+.trail {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: rgb(146, 233, 255);
+    pointer-events: none;
+}
+
+#meme-cylinder-container {
+    perspective: 1000px;
+    width: 200px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+#meme-cylinder {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 20s infinite linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.meme-image {
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    left: 5px;
+    top: 55px;
+    background-size: cover;
+    background-position: center;
+    backface-visibility: hidden;
+}
