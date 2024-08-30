@@ -3,15 +3,16 @@
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background: rgb(146, 233, 255);
+    background: rgb(255, 0, 0);
     pointer-events: none;
+    z-index: 1001;
 }
 
 #meme-cylinder-container {
     perspective: 1000px;
     width: 200px;
-    height: 300px;
-    margin: 0 auto;
+    height: 200px;
+    margin: 0px 50px;
 }
 
 #meme-cylinder {
@@ -19,7 +20,7 @@
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    animation: rotate 20s infinite linear;
+    animation: rotate 10s infinite linear;
 }
 
 @keyframes rotate {

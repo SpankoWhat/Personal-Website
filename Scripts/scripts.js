@@ -38,8 +38,15 @@ document.addEventListener('DOMContentLoaded', function () {
     for (let i = 0; i < numberOfMemes; i++) {
         const meme = document.createElement('div');
         meme.className = 'meme-image';
-        meme.style.backgroundImage = `url(${memeFolder}meme${i + 1}.gif)`; // Adjust file naming as needed
+        meme.style.backgroundImage = `url(${memeFolder}meme${i + 1}.gif)`;
         meme.style.transform = `rotateY(${i * (360 / numberOfMemes)}deg) translateZ(100px)`;
         cylinder.appendChild(meme);
     }
 });
+
+function playSound(soundFile) {
+    var filename = `../Media/Sounds/${soundFile}.mp3`;
+    var sound = new Audio(filename);
+    sound.currentTime = 0;
+    sound.play();
+}
